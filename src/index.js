@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Routes from './Routes';
 
-import './custom.css';
 import './reset.css';
-
-import App from './App';
+import 'bulma/css/bulma.css';
+import './custom.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Routes />
   </React.StrictMode>,
   document.getElementById('root')
 );

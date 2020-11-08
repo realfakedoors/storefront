@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 496 496" style="enable-background:new 0 0 496 496;" xml:space="preserve">
+<path style="fill:#EFE7E4;" d="M416,248v32h8c17.672,0,32,14.328,32,32l0,0c0,17.672-14.328,32-32,32H80v32h344  c35.344,0,64-28.656,64-64l0,0c0-35.344-28.656-64-64-64H416z"/>
+<path style="fill:#D8D1D0;" d="M424,248h-8v2.096c27.592,7.112,48,32.088,48,61.904c0,35.344-28.656,64-64,64h24  c35.344,0,64-28.656,64-64S459.344,248,424,248z"/>
+<path style="fill:#3F3A34;" d="M424,384H72v-48h352c13.232,0,24-10.768,24-24s-10.768-24-24-24h-16v-48h16c39.696,0,72,32.304,72,72  S463.696,384,424,384z M88,368h336c30.88,0,56-25.12,56-56s-25.12-56-56-56v16c22.056,0,40,17.944,40,40s-17.944,40-40,40H88V368z"/>
+<path style="fill:#98CE59;" d="M20.688,115.608l-2.216,7.768C11.52,147.672,8,172.824,8,198.096v3.808  c0,25.272,3.52,50.424,10.464,74.728l2.216,7.768c1.968,6.864,8.248,11.6,15.392,11.6h367.864c7.144,0,13.424-4.736,15.384-11.608  l2.216-7.768C428.48,252.328,432,227.176,432,201.904v-3.808c0-25.272-3.52-50.424-10.464-74.728l-2.216-7.768  c-1.968-6.864-8.248-11.6-15.392-11.6H36.072C28.928,104,22.648,108.736,20.688,115.608z"/>
+<path style="fill:#91BF55;" d="M421.536,123.368l-2.216-7.768c-1.968-6.864-8.248-11.6-15.392-11.6h-24  c7.144,0,13.424,4.736,15.384,11.608l2.216,7.768C404.48,147.672,408,172.824,408,198.096v3.808c0,25.272-3.52,50.424-10.464,74.728  l-2.216,7.768c-1.968,6.864-8.248,11.6-15.392,11.6h24c7.144,0,13.424-4.736,15.384-11.608l2.216-7.768  C428.48,252.328,432,227.176,432,201.904v-3.808C432,172.824,428.48,147.672,421.536,123.368z"/>
+<rect x="40" y="136" style="fill:#EFE7E4;" width="40" height="160"/>
+<rect x="64" y="136" style="fill:#D8D1D0;" width="16" height="160"/>
+<g>
+	<rect x="80" y="136" style="fill:#EFE7E4;" width="40" height="160"/>
+	<rect x="120" y="136" style="fill:#EFE7E4;" width="40" height="160"/>
+</g>
+<g>
+	<rect x="104" y="136" style="fill:#D8D1D0;" width="16" height="160"/>
+	<rect x="144" y="136" style="fill:#D8D1D0;" width="16" height="160"/>
+</g>
+<rect x="160" y="136" style="fill:#EFE7E4;" width="40" height="160"/>
+<rect x="184" y="136" style="fill:#D8D1D0;" width="16" height="160"/>
+<rect x="200" y="136" style="fill:#EFE7E4;" width="40" height="160"/>
+<rect x="224" y="136" style="fill:#D8D1D0;" width="16" height="160"/>
+<rect x="240" y="136" style="fill:#EFE7E4;" width="40" height="160"/>
+<rect x="264" y="136" style="fill:#D8D1D0;" width="16" height="160"/>
+<rect x="280" y="136" style="fill:#EFE7E4;" width="40" height="160"/>
+<rect x="304" y="136" style="fill:#D8D1D0;" width="16" height="160"/>
+<rect x="320" y="136" style="fill:#EFE7E4;" width="40" height="160"/>
+<rect x="344" y="136" style="fill:#D8D1D0;" width="16" height="160"/>
+<rect x="360" y="136" style="fill:#EFE7E4;" width="40" height="160"/>
+<rect x="384" y="136" style="fill:#D8D1D0;" width="16" height="160"/>
+<g>
+	<polygon style="fill:#3F3A34;" points="48,296 32,296 32,128 80,128 80,144 48,144  "/>
+	<polygon style="fill:#3F3A34;" points="88,296 72,296 72,128 120,128 120,144 88,144  "/>
+	<polygon style="fill:#3F3A34;" points="128,296 112,296 112,128 160,128 160,144 128,144  "/>
+	<polygon style="fill:#3F3A34;" points="168,296 152,296 152,128 200,128 200,144 168,144  "/>
+	<polygon style="fill:#3F3A34;" points="208,296 192,296 192,128 240,128 240,144 208,144  "/>
+	<polygon style="fill:#3F3A34;" points="248,296 232,296 232,128 280,128 280,144 248,144  "/>
+	<polygon style="fill:#3F3A34;" points="288,296 272,296 272,128 320,128 320,144 288,144  "/>
+	<rect x="312" y="272" style="fill:#3F3A34;" width="16" height="24"/>
+	<polygon style="fill:#3F3A34;" points="368,296 352,296 352,144 328,144 328,256 312,256 312,128 368,128  "/>
+	<polygon style="fill:#3F3A34;" points="408,296 392,296 392,144 360,144 360,128 408,128  "/>
+	<path style="fill:#3F3A34;" d="M403.928,304H36.072c-10.656,0-20.152-7.16-23.08-17.408l-2.216-7.768   C3.624,253.8,0,227.92,0,201.904v-3.816c0-26.016,3.624-51.896,10.776-76.92l2.216-7.768C15.92,103.16,25.416,96,36.072,96h367.856   c10.656,0,20.152,7.16,23.08,17.408l2.216,7.768C436.376,146.2,440,172.08,440,198.096v3.816c0,26.016-3.624,51.896-10.776,76.92   l-2.216,7.768C424.08,296.84,414.584,304,403.928,304z M28.376,117.808l-2.216,7.76c-6.736,23.592-10.16,48-10.16,72.52v3.816   c0,24.528,3.416,48.928,10.16,72.52l2.216,7.768c0.976,3.424,4.136,5.808,7.696,5.808h367.856c3.552,0,6.72-2.384,7.696-5.808   l2.216-7.768c6.736-23.592,10.16-48,10.16-72.52v-3.816c0-24.528-3.416-48.928-10.16-72.52l-2.216-7.768   c-0.976-3.416-4.136-5.8-7.696-5.8H36.072C32.512,112,29.352,114.384,28.376,117.808L28.376,117.808z"/>
+</g>
+<rect x="64" y="136" style="fill:#9B9B9B;" width="32" height="104"/>
+<rect x="80" y="136" style="fill:#8C8C8C;" width="16" height="104"/>
+<rect x="144" y="136" style="fill:#9B9B9B;" width="32" height="104"/>
+<rect x="160" y="136" style="fill:#8C8C8C;" width="16" height="104"/>
+<rect x="224" y="136" style="fill:#9B9B9B;" width="32" height="104"/>
+<rect x="240" y="136" style="fill:#8C8C8C;" width="16" height="104"/>
+<rect x="344" y="136" style="fill:#9B9B9B;" width="32" height="104"/>
+<rect x="360" y="136" style="fill:#8C8C8C;" width="16" height="104"/>
+<g>
+	<polygon style="fill:#3F3A34;" points="104,248 56,248 56,176 72,176 72,232 88,232 88,144 72,144 72,160 56,160 56,128 104,128     "/>
+	<path style="fill:#3F3A34;" d="M184,248h-48V128h48V248z M152,232h16v-88h-16V232z"/>
+	<path style="fill:#3F3A34;" d="M264,248h-48V128h48V248z M232,232h16v-88h-16V232z"/>
+	<path style="fill:#3F3A34;" d="M384,248h-48V128h48V248z M352,232h16v-88h-16V232z"/>
+</g>
+<rect x="48" y="328" style="fill:#9B9B9B;" width="32" height="64"/>
+<rect x="64" y="328" style="fill:#8C8C8C;" width="16" height="64"/>
+<rect x="8" y="344" style="fill:#9B9B9B;" width="40" height="32"/>
+<rect x="32" y="344" style="fill:#8C8C8C;" width="16" height="32"/>
+<g>
+	<path style="fill:#3F3A34;" d="M88,400H40v-80h48V400z M56,384h16v-48H56V384z"/>
+	<path style="fill:#3F3A34;" d="M56,384H0v-48h56V384z M16,368h24v-16H16V368z"/>
+	<rect x="104" y="344" style="fill:#3F3A34;" width="16" height="32"/>
+	<rect x="136" y="344" style="fill:#3F3A34;" width="16" height="32"/>
+	<rect x="168" y="344" style="fill:#3F3A34;" width="16" height="32"/>
+	<rect x="200" y="344" style="fill:#3F3A34;" width="16" height="32"/>
+	<rect x="232" y="344" style="fill:#3F3A34;" width="16" height="32"/>
+	<rect x="264" y="344" style="fill:#3F3A34;" width="16" height="32"/>
+	<rect x="296" y="344" style="fill:#3F3A34;" width="16" height="32"/>
+	<rect x="328" y="344" style="fill:#3F3A34;" width="16" height="32"/>
+	<rect x="360" y="344" style="fill:#3F3A34;" width="16" height="32"/>
+	<rect x="392" y="344" style="fill:#3F3A34;" width="16" height="32"/>
+	<rect x="424" y="344" style="fill:#3F3A34;" width="16" height="32"/>
+	
+		<rect x="452.038" y="329.58" transform="matrix(-0.5547 0.8321 -0.8321 -0.5547 1001.4464 152.0341)" style="fill:#3F3A34;" width="16.001" height="28.849"/>
+	<rect x="456" y="304" style="fill:#3F3A34;" width="32" height="16"/>
+	
+		<rect x="445.6" y="272.013" transform="matrix(-0.8321 0.5547 -0.5547 -0.8321 998.1118 257.8375)" style="fill:#3F3A34;" width="28.849" height="16.001"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
