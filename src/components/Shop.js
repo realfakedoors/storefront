@@ -6,9 +6,15 @@ import Products from "./Products";
 
 const Shop = ({ iconLocator }) => {
   const [cartContents, setCartContents] = useState([]);
+  const [itemWasDeleted, setItemWasDeleted] = useState(false);
 
   function addToCart(item) {
     setCartContents((prevCartContents) => [...prevCartContents, item]);
+  }
+  
+  function deleteItem(item){
+    setCartContents(cartContents.filter(product => product.itemId !== item));
+    setItemWasDeleted(true);
   }
 
   const match = useRouteMatch();
@@ -27,6 +33,8 @@ const Shop = ({ iconLocator }) => {
         contents={cartContents}
         className="navbar-item is-right"
         iconLocator={iconLocator}
+        deleteItem={deleteItem}
+        itemWasDeleted={itemWasDeleted}
       />
       <nav className="navbar shop-nav">
         <div className="navbar-menu is-justify-content-center">

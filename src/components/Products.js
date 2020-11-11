@@ -12,7 +12,7 @@ const Products = ({ category, addToCart }) => {
           return (
             <div key={key}>
               <Product
-                icon={data.iconId}
+                itemId={data.itemId}
                 category={data.category}
                 name={data.name}
                 price={data.price}
