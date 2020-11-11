@@ -4,6 +4,7 @@ import Routes from './Routes';
 
 import './reset.css';
 import 'bulma/css/bulma.css';
+import 'react-notifications/lib/notifications.css';
 import './custom.css';
 
 ReactDOM.render(

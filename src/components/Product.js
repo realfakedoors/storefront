@@ -31,7 +31,11 @@ const Product = ({ itemId, category, name, price, description, addToCart }) => {
       </div>
       <footer className="card-footer">
         <span className="card-footer-item select-quantity">
-          <select className="select-quantity-box" name="Qty" id={`qty-${itemId}`}>
+          <select
+            className="select-quantity-box"
+            name="Qty"
+            id={`qty-${itemId}`}
+          >
             {[...Array(5).keys()].map((x, i) => (
               <option value={x + 1} key={i}>
                 {x + 1}

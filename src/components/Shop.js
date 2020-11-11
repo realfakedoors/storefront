@@ -1,21 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route, NavLink, useRouteMatch } from "react-router-dom";
+import { NotificationManager, NotificationContainer } from 'react-notifications';
 
 import ShoppingCart from "./ShoppingCart";
 import Products from "./Products";
 
 const Shop = ({ iconLocator }) => {
-  const [cartContents, setCartContents] = useState([]);
+  const [cartContents, setCartContents] = useState(JSON.parse(localStorage.getItem('cartContents')));
   const [itemWasDeleted, setItemWasDeleted] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
+    
     return () => {
       window.removeEventListener("scroll", () => handleScroll);
     };
-  }, []);
+  });
+  
+  useEffect(() => {
+    localStorage.setItem("cartContents", JSON.stringify(cartContents));
+  }, [cartContents]);
 
   function handleScroll() {
     if (window.scrollY > 107) {
@@ -26,11 +31,13 @@ const Shop = ({ iconLocator }) => {
   }
 
   function addToCart(item) {
+    NotificationManager.success(`${item.name} added to cart.`);
     setCartContents((prevCartContents) => [...prevCartContents, item]);
   }
 
   function deleteItem(item) {
-    setCartContents(cartContents.filter((product) => product.itemId !== item));
+    NotificationManager.error(`${item.name} removed from cart.`);
+    setCartContents(cartContents.filter((product) => product.itemId !== item.itemId));
     setItemWasDeleted(true);
   }
 
@@ -54,6 +61,7 @@ const Shop = ({ iconLocator }) => {
         itemWasDeleted={itemWasDeleted}
         isSticky={isSticky}
       />
+      <NotificationContainer/>
       <nav className={`navbar ${isSticky && "sticky"}`} id="shop-nav">
         <div className="navbar-menu is-justify-content-center">
           <NavLink
@@ -82,11 +90,11 @@ const Shop = ({ iconLocator }) => {
         {allCategories.map((category, index) => {
           return (
             <Route path={`${match.path}/c/${category}`} key={index}>
-              <Products category={category} addToCart={addToCart} key={index} />
+              <Products category={category} addToCart={addToCart} />
             </Route>
           );
         })}
-        <Route path={match.path}>
+        <Route exact path={match.path}>
           <Products category={"all"} addToCart={addToCart} />
         </Route>
       </Switch>

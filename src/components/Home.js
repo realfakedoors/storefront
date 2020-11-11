@@ -4,7 +4,7 @@ const Home = ({ iconLocator }) => {
   return (
     <div className="about">
       <h1 className="title is-1">Welcome to our Store!</h1>
-      <p className="content is-medium">
+      <div className="content is-medium">
         <div className="block">
           <strong>
             We've got all kinds of stuff that makes cool sounds!<br />
@@ -15,8 +15,8 @@ const Home = ({ iconLocator }) => {
         <figure className="content-image image float-right">
           <img src={iconLocator(18)} alt="drums" />
         </figure>
-      </p>
-      <p className="content is-medium">
+      </div>
+      <div className="content is-medium">
         <div className="block">
           <strong>
             Producers, we've got you covered!<br />
@@ -27,8 +27,8 @@ const Home = ({ iconLocator }) => {
         <figure className="content-image image float-left">
           <img src={iconLocator(14)} alt="tambourine" />
         </figure>
-      </p>
-      <p className="content is-medium">
+      </div>
+      <div className="content is-medium">
         <div className="block">
           <strong>
             The Harpist Zone<br />
@@ -40,7 +40,7 @@ const Home = ({ iconLocator }) => {
         <figure className="content-image image float-right">
           <img src={iconLocator(10)} alt="guiro" />
         </figure>
-      </p>
+      </div>
     </div>
   );
 }

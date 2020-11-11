@@ -74,42 +74,48 @@ const ShoppingCart = ({
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-  return (
-    <div
-      className={`dropdown shopping-cart is-right ${isSticky && "sticky-cart"}`}
-      id="shopping-cart"
-    >
-      <div className="dropdown-trigger" onClick={toggleVisibility}>
-        Cart({contents.length})
-      </div>
-      <div className="dropdown-menu">
-        {cartItems.map((item, key) => {
-          return (
-            <div className="dropdown-item shopping-cart-item" key={key}>
-              <article className="media">
-                <figure className="media-left">
-                  <p className="image is-48x48 shopping-cart-item-image">
-                    {console.log(cartItems)}
-                    <img src={iconLocator(item.itemId)} alt={item.name} />
-                  </p>
-                </figure>
-                <div className="media-content shopping-cart-content">
-                  <div className="item-info">
-                    <span className="item-frequency">{item.frequency}</span>
-                    <span className="item-name">{item.name}</span>
-                    <span
-                      className="item-delete"
-                      onClick={deleteItem.bind(deleteItem, item.itemId)}
-                    >
-                      X
-                    </span>
-                    <span className="item-price">${addCommas(item.price)}</span>
-                  </div>
-                </div>
-              </article>
+  let dropdownItems;
+  if (contents.length > 0) {
+    dropdownItems = cartItems.map((item, key) => {
+      return (
+        <div className="dropdown-item shopping-cart-item" key={key}>
+          <article className="media">
+            <figure className="media-left">
+              <p className="image is-48x48 shopping-cart-item-image">
+                <img src={iconLocator(item.itemId)} alt={item.name} />
+              </p>
+            </figure>
+            <div className="media-content shopping-cart-content">
+              <div className="item-info">
+                <span className="item-frequency">{item.frequency}</span>
+                <span className="item-name">{item.name}</span>
+                <span
+                  className="item-delete"
+                  onClick={deleteItem.bind(deleteItem, item)}
+                >
+                  X
+                </span>
+                <span className="item-price">${addCommas(item.price)}</span>
+              </div>
             </div>
-          );
-        })}
+          </article>
+        </div>
+      );
+    });
+  } else {
+    dropdownItems = null;
+  }
+
+  let dropdownInfo;
+  if (contents.length === 0) {
+    dropdownInfo = (
+      <div className="empty-cart">
+        Your cart is empty!
+      </div>
+    );
+  } else {
+    dropdownInfo = (
+      <div>
         <hr className="dropdown-divider" />
         <div className="dropdown-subtotal">
           <span className="dropdown-subtotal-text">Subtotal</span>
@@ -119,6 +125,21 @@ const ShoppingCart = ({
         </div>
         <hr className="dropdown-divider" />
         <button className="dropdown-checkout">Check Out</button>
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className={`dropdown shopping-cart is-right ${isSticky && "sticky-cart"}`}
+      id="shopping-cart"
+    >
+      <div className="dropdown-trigger" onClick={toggleVisibility}>
+        Cart({contents.length})
+      </div>
+      <div className="dropdown-menu">
+        {dropdownItems}
+        {dropdownInfo}
       </div>
     </div>
   );
