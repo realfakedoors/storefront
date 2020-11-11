@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route, NavLink, useRouteMatch } from "react-router-dom";
 
 import ShoppingCart from "./ShoppingCart";
@@ -7,13 +7,30 @@ import Products from "./Products";
 const Shop = ({ iconLocator }) => {
   const [cartContents, setCartContents] = useState([]);
   const [itemWasDeleted, setItemWasDeleted] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", () => handleScroll);
+    };
+  }, []);
+
+  function handleScroll() {
+    if (window.scrollY > 107) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  }
 
   function addToCart(item) {
     setCartContents((prevCartContents) => [...prevCartContents, item]);
   }
-  
-  function deleteItem(item){
-    setCartContents(cartContents.filter(product => product.itemId !== item));
+
+  function deleteItem(item) {
+    setCartContents(cartContents.filter((product) => product.itemId !== item));
     setItemWasDeleted(true);
   }
 
@@ -31,12 +48,13 @@ const Shop = ({ iconLocator }) => {
     <div className="shop">
       <ShoppingCart
         contents={cartContents}
-        className="navbar-item is-right"
+        className={"navbar-item"}
         iconLocator={iconLocator}
         deleteItem={deleteItem}
         itemWasDeleted={itemWasDeleted}
+        isSticky={isSticky}
       />
-      <nav className="navbar shop-nav">
+      <nav className={`navbar ${isSticky && "sticky"}`} id="shop-nav">
         <div className="navbar-menu is-justify-content-center">
           <NavLink
             exact

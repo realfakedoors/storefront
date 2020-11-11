@@ -78,13 +78,19 @@ body {
   color: #de673f;
 }
 
-.shop-nav {
-  position: relative;
+#shop-nav {
   z-index: 2;
 
+  margin-bottom: 20px;
   padding: 10px 0;
+  
+  background-color: #f2f2f2;
+}
 
-  background: none;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .shop-navbar-selected {
@@ -182,12 +188,18 @@ body {
   cursor: pointer;
 }
 
+.sticky-cart {
+  position: fixed;
+  top: 5px;
+  right: 20px;
+}
+
 .dropdown-trigger:hover {
   background-color: #c49b21;
   border-color: #ae8a1e;
 }
 
-.dropdown-menu {
+.dropdown-menu {  
   border: 1px solid #888;
 }
 

@@ -1,27 +1,33 @@
 import React, { useState, useEffect } from "react";
 
-const ShoppingCart = ({ contents, iconLocator, deleteItem, itemWasDeleted }) => {
+const ShoppingCart = ({
+  contents,
+  iconLocator,
+  deleteItem,
+  itemWasDeleted,
+  isSticky,
+}) => {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     organizeCartItems(contents);
     hideCartIfEmptiedOut(contents);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contents]);
 
-  function stackItems(items){
+  function stackItems(items) {
     let flags = {};
-    return(items.filter(function(item){
-      if (flags[item.itemId]){
+    return items.filter(function (item) {
+      if (flags[item.itemId]) {
         return false;
       }
       flags[item.itemId] = true;
       return true;
-    }));
+    });
   }
-  
-  function calculatePrice(price, count){
-    return ((Number(price.replace(/,/g, "")) * count)).toFixed(2)
+
+  function calculatePrice(price, count) {
+    return (Number(price.replace(/,/g, "")) * count).toFixed(2);
   }
 
   function organizeCartItems(items) {
@@ -44,9 +50,9 @@ const ShoppingCart = ({ contents, iconLocator, deleteItem, itemWasDeleted }) => 
     });
     setCartItems(stackedAndCounted);
   }
-  
-  function hideCartIfEmptiedOut(items){
-    if (items.length === 0 && itemWasDeleted === true){
+
+  function hideCartIfEmptiedOut(items) {
+    if (items.length === 0 && itemWasDeleted === true) {
       toggleVisibility();
     }
   }
@@ -55,21 +61,24 @@ const ShoppingCart = ({ contents, iconLocator, deleteItem, itemWasDeleted }) => 
     let dropdown = document.getElementById("shopping-cart");
     dropdown.classList.toggle("is-active");
   }
-  
-  function calculateSubtotal(){
+
+  function calculateSubtotal() {
     let runningTotal = 0;
-    cartItems.forEach(item => {
+    cartItems.forEach((item) => {
       runningTotal += Math.round(item.price * 100) / 100;
     });
     return runningTotal;
   }
-  
-  function addCommas(price){
+
+  function addCommas(price) {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
   return (
-    <div className="dropdown is-right shopping-cart" id="shopping-cart">
+    <div
+      className={`dropdown shopping-cart is-right ${isSticky && "sticky-cart"}`}
+      id="shopping-cart"
+    >
       <div className="dropdown-trigger" onClick={toggleVisibility}>
         Cart({contents.length})
       </div>
@@ -80,7 +89,7 @@ const ShoppingCart = ({ contents, iconLocator, deleteItem, itemWasDeleted }) => 
               <article className="media">
                 <figure className="media-left">
                   <p className="image is-48x48 shopping-cart-item-image">
-                  {console.log(cartItems)}
+                    {console.log(cartItems)}
                     <img src={iconLocator(item.itemId)} alt={item.name} />
                   </p>
                 </figure>
@@ -88,7 +97,12 @@ const ShoppingCart = ({ contents, iconLocator, deleteItem, itemWasDeleted }) => 
                   <div className="item-info">
                     <span className="item-frequency">{item.frequency}</span>
                     <span className="item-name">{item.name}</span>
-                    <span className="item-delete" onClick={deleteItem.bind(deleteItem, item.itemId)}>X</span>
+                    <span
+                      className="item-delete"
+                      onClick={deleteItem.bind(deleteItem, item.itemId)}
+                    >
+                      X
+                    </span>
                     <span className="item-price">${addCommas(item.price)}</span>
                   </div>
                 </div>
@@ -99,7 +113,9 @@ const ShoppingCart = ({ contents, iconLocator, deleteItem, itemWasDeleted }) => 
         <hr className="dropdown-divider" />
         <div className="dropdown-subtotal">
           <span className="dropdown-subtotal-text">Subtotal</span>
-          <span className="dropdown-subtotal-amount">${addCommas(calculateSubtotal())}</span>
+          <span className="dropdown-subtotal-amount">
+            ${addCommas(calculateSubtotal())}
+          </span>
         </div>
         <hr className="dropdown-divider" />
         <button className="dropdown-checkout">Check Out</button>
