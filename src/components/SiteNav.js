@@ -9,7 +9,7 @@ const SiteNav = () => {
       role="navigation"
       aria-label="main navigation"
     >
-      <div className="navbar-brand">
+      <a className="navbar-brand" href={process.env.PUBLIC_URL}>
         <img
           className="navbar-item site-navbar-item"
           src={logo}
@@ -20,7 +20,7 @@ const SiteNav = () => {
         <h5 className="navbar-item site-navbar-item company-name">
           The Awesome Music Shop
         </h5>
-      </div>
+      </a>
       <div className="navbar-menu">
         <div className="navbar-end site-navbar-end">
           <NavLink

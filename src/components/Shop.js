@@ -7,7 +7,7 @@ import ShoppingCart from "./ShoppingCart";
 import Products from "./Products";
 
 const Shop = ({ iconLocator }) => {
-  const [cartContents, setCartContents] = useState(JSON.parse(localStorage.getItem('cartContents')));
+  const [cartContents, setCartContents] = useState(checkLocalStorage());
   const [itemWasDeleted, setItemWasDeleted] = useState(false);
   const [isSticky, setIsSticky] = useStateIfMounted(false);
 
@@ -23,6 +23,12 @@ const Shop = ({ iconLocator }) => {
     localStorage.setItem("cartContents", JSON.stringify(cartContents));
   }, [cartContents]);
 
+  function checkLocalStorage() {
+    return (
+      JSON.parse(localStorage.getItem('cartContents')) || []
+    );
+  }
+  
   function handleScroll() {
     if (window.scrollY > 107) {
       setIsSticky(true);
@@ -63,7 +69,7 @@ const Shop = ({ iconLocator }) => {
         isSticky={isSticky}
       />
       <NotificationContainer/>
-      <nav className={`navbar ${isSticky && "sticky"}`} id="shop-nav">
+      <nav className={`navbar shop-nav ${isSticky && "sticky"}`}>
         <div className="navbar-menu is-justify-content-center">
           <NavLink
             exact

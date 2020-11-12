@@ -22,9 +22,7 @@ const Routes = () => {
         />
         <Route
           path="/shop"
-          component={() => (
-            <Shop iconLocator={iconLocator} />
-          )}
+          component={() => <Shop iconLocator={iconLocator} />}
         />
         <Route
           path="/about"
