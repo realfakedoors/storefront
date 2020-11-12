@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useStateIfMounted } from "use-state-if-mounted";
 import { Switch, Route, NavLink, useRouteMatch } from "react-router-dom";
 import { NotificationManager, NotificationContainer } from 'react-notifications';
 
@@ -8,7 +9,7 @@ import Products from "./Products";
 const Shop = ({ iconLocator }) => {
   const [cartContents, setCartContents] = useState(JSON.parse(localStorage.getItem('cartContents')));
   const [itemWasDeleted, setItemWasDeleted] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
+  const [isSticky, setIsSticky] = useStateIfMounted(false);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
