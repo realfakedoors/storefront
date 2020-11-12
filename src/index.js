@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Routes from './Routes';
 
-import './reset.css';
+import './assets/reset.css';
 import 'bulma/css/bulma.css';
 import 'react-notifications/lib/notifications.css';
-import './custom.css';
+import './assets/custom.css';
 
 ReactDOM.render(
   <React.StrictMode>

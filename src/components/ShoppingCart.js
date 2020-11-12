@@ -65,9 +65,9 @@ const ShoppingCart = ({
   function calculateSubtotal() {
     let runningTotal = 0;
     cartItems.forEach((item) => {
-      runningTotal += Math.round(item.price * 100) / 100;
+      runningTotal += (item.price * 100);
     });
-    return runningTotal;
+    return (runningTotal / 100);
   }
 
   function addCommas(price) {
